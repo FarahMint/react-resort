@@ -5,6 +5,7 @@ import {Route,
   } from 'react-router-dom'
  
 import NavBar from './components/Global/Navbar';
+import Footer from './components/Global/Footer';
 import Home from './components/Home/Home';
 import RoomsContainer  from './components/Rooms/RoomsContainer';
 import SingleRoom from './components/Rooms/SingleRoom';
@@ -20,7 +21,7 @@ function App() {
   <Route exact path='/rooms/:id' component={SingleRoom}/> 
   <Route   component={ErrorPage }/> 
     </Switch>
-
+  <Footer/>
     </>
   );
 }

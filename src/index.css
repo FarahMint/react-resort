@@ -231,11 +231,10 @@ input, select{
 /* SERVICES */
 .services {
   padding: 5rem 0;
-}
-.services {
   background: var(--darkGrey);
   text-align: center;
 }
+ 
 .services-center {
   width: 90vw;
   margin: 0 auto;
@@ -290,6 +289,7 @@ input, select{
 }
 .img-container img {
   width: 100%;
+  height:194px;
   display: block;
   transition: var(--mainTransition);
 }
@@ -297,8 +297,8 @@ input, select{
   position: absolute;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.8);
-  color: var(--mainWhite);
+  background:var(--primaryColor);
+  color: var(--mainBlack);
   padding: 0.3rem 0.6rem 0.5rem;
   border-bottom-right-radius: 1rem;
   font-size: 0.5rem;
@@ -331,12 +331,13 @@ input, select{
   transform: translate(-50%, -50%) scale(1);
 }
 .room-info {
-  background: var(--mainGrey);
+  background: var(--mainBlack) ;
   text-transform: capitalize;
   padding: 0.5rem 0;
   text-align: center;
-  font-weight: 700;
+  font-weight: 200;
   letter-spacing: var(--mainSpacing);
+  color:  var(--mainWhite);
 }
 /*  END ROOM  */
 
@@ -356,7 +357,9 @@ input, select{
 }
 .single-room-images img {
   width: 100%;
+  height:100%;
   display: block;
+  object-fit: cover;
 }
 .single-room-info {
   width: 80vw;
@@ -416,7 +419,7 @@ input, select{
 .roomslist {
   /* padding: 5rem 0; */
   overflow: scroll;
-  height: 100vh;
+  height: 80vh;
 }
 
 
@@ -515,6 +518,18 @@ label{
 }
 /* END ROOMS FILTER*/
 
+/* FOOTER*/
+footer{
+  margin-top:2rem;
+  padding: 2rem;
+  background-color: var(--mainBlack);
+  text-align:center;
+}
+footer > span{
+  color: var(--mainWhite);
+}
+/* FOOTER*/
+
 
 /* LOADING -- https://loading.io/css/*/
  
@@ -608,6 +623,7 @@ label{
 /*  END LOADING*/
 
 /* MEDIA QUERY*/
+/* screen with less than 768px*/
 @media screen and (max-width: 768px) {
   /*  SHOWCASE*/
  
@@ -651,12 +667,12 @@ label{
   }
 
   .roomslist-center {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); 
   }
 
 };
 
-
+/* screen  greater than 992px*/
 @media screen and (min-width: 992px){
     /*  BANNER*/
     .banner {
@@ -708,7 +724,7 @@ label{
     }
 }
 
-
+/* screen  greater than 776px*/
 @media screen and (min-width: 776px) {
   /*  NAV*/
   .nav-btn {
