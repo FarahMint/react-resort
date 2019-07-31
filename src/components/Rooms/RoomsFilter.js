@@ -1,4 +1,6 @@
 import React, {useContext} from 'react';
+
+// import Calendar from './Calendar';
 import {RoomContext} from '../../Contexts';
 import {withRouter,Link} from 'react-router-dom';
 
@@ -15,7 +17,7 @@ const RoomsFilter=(props ) =>{
     const context = useContext(RoomContext);
 
 //  destructure
-const {handleChange,handleSubmit,  type, capacity, price, minPrice, maxPrice, breakfast, pets}= context;
+const {handleChange,handleSubmit,  type, capacity, price, minPrice, maxPrice ,breakfast, pets}= context;
 
 // get unique type
 let types = getUnique(props.rooms, 'type');
@@ -84,9 +86,7 @@ types = types.map((item, index )=>{
                       value={price}
                       onChange={handleChange}
                       />
-
                   </div>
-
                     {/* end room price */}
 
                      {/* breakfast and pets*/}

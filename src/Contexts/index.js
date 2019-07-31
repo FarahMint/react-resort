@@ -25,10 +25,11 @@ class RoomProvider extends Component {
         maxPrice:0,
         // minSize:0,
         // maxSize:0,
-        checkIn:new Date(),
-        checkOut:new Date(),
+        checkIn:Date,
+        checkOut:Date,
         breakfast:false,
         pets:false,
+    
     }
 
 
